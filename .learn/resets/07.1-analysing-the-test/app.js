@@ -14,18 +14,6 @@ let oneEuroIs = {
     "USD": 1.07, // us dollar
     "GBP": 0.87, // british pound
 }
-  
-  // EURO x 1.07 = USD 
-  // USD/1.07=EURO
-  
-  // EURO x 156.5 = JPY
-  // JPY/156.5=EURO
-
-    // EURO x .87 = GDP
-  
-  // EURO x .87 = GBP
-  // GBP/.87=EURO
-
 
 // We declare the function with the exact name "fromEuroToDollar"
 const fromEuroToDollar = function(valueInEuro) {
@@ -34,21 +22,15 @@ const fromEuroToDollar = function(valueInEuro) {
     // return the dollar value
     return valueInDollar;
 }
-console.log(fromEuroToDollar(1))
+
 const fromDollarToYen = function(valueInDollar) {
     let valueInEuro = valueInDollar / oneEuroIs.USD
     let valueInYen = valueInEuro * oneEuroIs.JPY
     return valueInYen
 }
 
-console.log(fromDollarToYen(1.07))
-const fromYenToPound = function(valueInYen){
-    let valueInEuro = valueInYen / oneEuroIs.JPY
-    let valueInPound = valueInEuro * oneEuroIs.GBP
-    return valueInPound
-}
-console.log(fromYenToPound(156.5))
+const fromYenToPound
 
 // (similar to the keyword "export" when using webpack)
-module.exports = { sum, fromEuroToDollar, fromDollarToYen, fromYenToPound };
+module.exports = { sum, fromEuroToDollar, fromDollarToYen };
 
